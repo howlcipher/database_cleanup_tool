@@ -1,0 +1,25 @@
+# Database connection settings
+database:
+  # Specify the ODBC driver to be used for the connection
+  driver: '{ODBC Driver 17 for SQL Server}'
+  
+  # The server address where the database is hosted
+  server: '10.9.1.69'
+  
+  # List of databases to be processed; add more as needed
+  databases:
+    - 'CM_ALP'  # First database to connect and process
+    - 'FIFSSign'  # Second database to connect and process
+    # You can add more databases here as needed
+  
+  # Database user credentials for authentication
+  uid: 'tkxel_testuser'  # User ID for the database connection
+  pwd: '56789'  # Password for the database connection
+
+# Logging settings
+logging:
+  # Specify the log file where all operations and errors will be recorded
+  file: 'db_cleanup.log'
+
+# Threshold for the number of rows; tables exceeding this count will be processed
+row_threshold: 1000  # Minimum number of rows in a table to trigger processing
